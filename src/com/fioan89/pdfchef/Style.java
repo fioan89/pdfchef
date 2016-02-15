@@ -8,9 +8,11 @@ import org.apache.pdfbox.pdmodel.font.PDFont;
  * Created by fauri on 15/02/16.
  */
 public class Style {
+    public enum Centering {LEFT, RIGHT, CENTER}
     private final PDFont font;
     private final float fontSize;
     private final Color color;
+
     private final Centering centering;
 
     public Style(@NotNull PDFont font, float fontSize) {
@@ -27,6 +29,4 @@ public class Style {
         this.color = textColor;
         this.centering = centering;
     }
-
-    public enum Centering {LEFT, RIGHT, CENTER}
 }
